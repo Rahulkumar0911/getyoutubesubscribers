@@ -1,10 +1,5 @@
 module.exports = {
-    // Specifies the test environment
-    testEnvironment: 'node',
-  
-    // Specifies the file types to include in tests
-    testMatch: ['**/*.test.js'],
-  
+   
     // Specifies the directory where Jest should output its coverage files
     coverageDirectory: 'coverage',
   
