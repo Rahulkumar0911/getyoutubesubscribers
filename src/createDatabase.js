@@ -10,6 +10,8 @@ const db = mongoose.connection
 db.on('error', (err) => console.log(err))
 db.once('open', () => console.log('Database created...'))
 
+//refreshing data and deleting it if any previous data
+
 const refreshAll = async () => {
     try{
     console.log("before insert menu")
