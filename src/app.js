@@ -1,13 +1,16 @@
-
+//import  modules
 const express = require('express');
 const Subscriber=require("../src/models/subscribers.js");
 const path=require("path");
 const subscribers = require('../src/models/subscribers.js');
 
 const app = express();
+//home route
+
 app.get("/",(req,res)=>{
     res.sendFile(path.join(__dirname,"/index.html"));
 });
+//subscribers route
 
 app.get("/subscribers",async(req,res,next)=>{
     try{
@@ -18,6 +21,7 @@ app.get("/subscribers",async(req,res,next)=>{
         next(error);
     }
 })
+//subscriber name and subscribed channel route
 
 app.get("/subscribers/names",async(req,res,next)=>{
     try{
@@ -28,6 +32,7 @@ app.get("/subscribers/names",async(req,res,next)=>{
         next(error);
     }
 });
+//find data of  ids
 
 app.get("/subscribers/:id", async(req,res,next)=>{
      try{
@@ -41,7 +46,7 @@ app.get("/subscribers/:id", async(req,res,next)=>{
 });
 module.export=app;
 
-// Your code goes here
+
 
 
 
